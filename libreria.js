@@ -28,8 +28,8 @@ const library = function () {
         <div class="card" style="height: 100%" >
   <img src="${img}" class="card-img-top" alt="foto">
   <div class="card-body d-flex flex-column justify-content-between">
-    <h5 class="card-title">${title}</h5>
-    <p class="card-text">${price} euro </p>
+    <h5 class="card-title fst-italic">${title}</h5>
+    <p class="card-text fw-semibold text-decoration-underline">${price} euro </p>
     <div>
     <span class="btn btn-danger">Scarta</span>
     <span class="btn btn-success">Compra ora</span>
@@ -37,6 +37,7 @@ const library = function () {
     </div>
 </div>`;
         row1.appendChild(newDiv);
+        // funzionalità bottoni card
         const button = document.getElementsByClassName("btn-danger");
         button[i].addEventListener("click", function () {
           newDiv.classList.add("visually-hidden");
@@ -60,7 +61,7 @@ const library = function () {
             liCarrello.appendChild(liElement);
             // const cancelButton = document.getElementById("cancel");
             // cancelButton.addEventListener("click", function () {
-            //   liElement[k].closest().classList.add("visually-hidden");
+            //   arrayCarrello.splice(k, 1);
             // });
           }
         });
